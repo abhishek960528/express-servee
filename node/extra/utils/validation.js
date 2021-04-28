@@ -8,7 +8,7 @@ var usersData = [
     reviewerEmail: "abhishek#gmail.com",
   },
   {
-    traineeEmail: "gajana@gmail.com",
+    traineeEmail: "adeshlad@gmail.com",
     reviewerEmail: "sarada@regular.com",
   },
 ];

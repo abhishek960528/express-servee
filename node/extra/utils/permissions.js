@@ -16,4 +16,4 @@ const hasPermission = (moduleName, role, permissionType) => {
   }
 };
 
-hasPermission("getUsers", "trainee", "read");
+hasPermission("getUsers", "trainee", "write");
