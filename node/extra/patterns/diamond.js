@@ -32,4 +32,5 @@ function printDiamond(rows) {
     console.log(spaces + star);
   }
 }
-printDiamond(10);
+
+export default printDiamond;

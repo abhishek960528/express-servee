@@ -23,4 +23,4 @@ function printequilateral(rows) {
     console.log(spaces + star);
   }
 }
-printequilateral(10);
+export default printequilateral;
