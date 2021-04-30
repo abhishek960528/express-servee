@@ -1,26 +1,25 @@
 const prompt = require("prompt-sync")();
 
-function createSpaces(space) {
-  var spaces = "";
-  for (i = 1; i < space; i++) {
+const createSpaces = (space) => {
+  let spaces = "";
+  for (initial = 1; initial < space; initial++) {
     spaces += " ";
   }
-
   return spaces;
-}
+};
 
-function addStar(addstar) {
+const addStar = (addstar) => {
   return (addstar += "* ");
-}
+};
 
-function printequilateral(rows) {
-  var star = "";
-  for (var i = 0; i < rows; i++) {
-    var spaces = createSpaces(rows - i);
+const printequilateral = (rows) => {
+  let star = "";
+  for (let initial = 0; initial < rows; initial++) {
+    let spaces = createSpaces(rows - initial);
     star = addStar(star);
     console.log(spaces + star);
   }
-}
+};
 
 const value = prompt("Enter the value : ");
 if (value <= 10 && value >= 2) {

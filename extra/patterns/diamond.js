@@ -1,39 +1,39 @@
 const prompt = require("prompt-sync")();
 
-function createSpaces(space) {
-  var spaces = "";
-  for (i = 1; i < space; i++) {
+const createSpaces = (space) => {
+  let spaces = "";
+  for (initial = 1; initial < space; initial++) {
     spaces += " ";
   }
   return spaces;
-}
+};
 
-function addStar(addstar) {
+const addStar = (addstar) => {
   return (addstar += "* ");
-}
+};
 
-function removeStar(removestar) {
+const removeStar = (removestar) => {
   return removestar.substring(0, removestar.length - 2);
-}
+};
 
-function printDiamond(rows) {
-  var width = rows / 2;
+const printDiamond = (rows) => {
+  let width = rows / 2;
 
-  var star = "";
-  for (var i = 0; i < width; i++) {
-    var spaces = createSpaces(width - i);
+  let star = "";
+  for (let initial = 0; initial < width; initial++) {
+    let spaces = createSpaces(width - initial);
     star = addStar(star);
     console.log(spaces + star);
   }
 
   console.log(spaces + star);
 
-  for (var i = width - 2; i >= 0; i--) {
-    var spaces = createSpaces(width - i);
+  for (let initial = width - 2; initial >= 0; initial--) {
+    let spaces = createSpaces(width - initial);
     star = removeStar(star);
     console.log(spaces + star);
   }
-}
+};
 
 const value = prompt("Enter the your desired value  : ");
 if (value <= 10 && value >= 2) {
