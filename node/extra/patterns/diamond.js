@@ -1,17 +1,19 @@
-function createSpaces(n) {
+const prompt = require("prompt-sync")();
+
+function createSpaces(space) {
   var spaces = "";
-  for (i = 1; i < n; i++) {
+  for (i = 1; i < space; i++) {
     spaces += " ";
   }
   return spaces;
 }
 
-function addStar(s) {
-  return (s += "* ");
+function addStar(addstar) {
+  return (addstar += "* ");
 }
 
-function removeStar(s) {
-  return s.substring(0, s.length - 2);
+function removeStar(removestar) {
+  return removestar.substring(0, removestar.length - 2);
 }
 
 function printDiamond(rows) {
@@ -32,4 +34,11 @@ function printDiamond(rows) {
     console.log(spaces + star);
   }
 }
-printDiamond(10);
+
+const value = prompt("Enter the your desired value  : ");
+if (value <= 10 && value >= 2) {
+  console.log(`Your desired Output :`);
+  printDiamond(value);
+} else {
+  console.log("Please Enter value greater than 2 or less than 10");
+}

@@ -1,18 +1,16 @@
-function createSpaces(n) {
+const prompt = require("prompt-sync")();
+
+function createSpaces(space) {
   var spaces = "";
-  for (i = 1; i < n; i++) {
+  for (i = 1; i < space; i++) {
     spaces += " ";
   }
 
   return spaces;
 }
 
-function addStar(s) {
-  return (s += "* ");
-}
-
-function removeStar(s) {
-  return s.substring(0, s.length - 2);
+function addStar(addstar) {
+  return (addstar += "* ");
 }
 
 function printequilateral(rows) {
@@ -23,4 +21,11 @@ function printequilateral(rows) {
     console.log(spaces + star);
   }
 }
-printequilateral(10);
+
+const value = prompt("Enter the value : ");
+if (value <= 10 && value >= 2) {
+  console.log(`your desired Output :`);
+  printequilateral(value);
+} else {
+  console.log("Please Enter value greater than 2 or less than 10");
+}
