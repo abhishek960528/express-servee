@@ -8,8 +8,14 @@ class Server {
     this.PORT = config.PORT;
   }
 
-  bootStrap() {
+  bootStrap() { 
     this.setupRoutes();
+    this.initBodyParser();
+  }
+
+
+  initBodyParser(){
+    
   }
 
   setupRoutes() {
